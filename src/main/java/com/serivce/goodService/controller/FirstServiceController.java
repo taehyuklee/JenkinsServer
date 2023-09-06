@@ -25,5 +25,10 @@ public class FirstServiceController {
         return "Hello world in Second Service.";
     }
 
+    @GetMapping("/test") //first-request header를 받는다.
+    public String test(){
+        return "Hello this is the test.";
+    }
+
 }
 //Controller와 RestContorller의 차이는 RequestBody와 ResponseBody를 구현하느냐 아니냐의 차이점이다.
