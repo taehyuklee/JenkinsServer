@@ -14,15 +14,15 @@ import lombok.extern.slf4j.Slf4j;
 public class FirstServiceController {
     @GetMapping("/welcome")
     public String welcome(){
-        return "Welcome to the First service";
+        return "Welcome to the second service";
     }
 
     @GetMapping("/message") //first-request header를 받는다.
-    public String message(@RequestHeader("first-request") String header){
+    public String message(@RequestHeader("second-request") String header){
         //@RequestHeader header값을 받아 갈 것이다.
         System.out.println(header);
         log.info(header);
-        return "Hello world in First Service.";
+        return "Hello world in Second Service.";
     }
 
 }
