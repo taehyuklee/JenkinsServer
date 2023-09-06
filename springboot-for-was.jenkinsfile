@@ -1,0 +1,29 @@
+pipeline{
+	agent any
+
+	stages{
+		stage('github Clone'){
+			steps{
+			  git branch: 'main',
+				credentialsId:'tayGit', 
+				url: 'https://github.com/taehyuklee/JenkinsServer.git'
+			}
+		}
+		stage('build'){
+			steps{
+				sh '''
+				start_build=`date`
+                echo $start_build
+                
+				 echo 'start bootJar'
+				 chmod +x ./gradlew
+				 dos2unix ./gradlew
+				 ./gradlew clean bootJar
+				 
+				 end_build=`date`
+                 echo $end_build
+				'''
+			}
+		}	
+	}
+}
