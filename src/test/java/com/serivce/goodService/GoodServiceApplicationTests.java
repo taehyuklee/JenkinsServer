@@ -72,4 +72,9 @@ class GoodServiceApplicationTests {
          */
     }
 
+    @Test
+    public void test(){
+        assertEquals("a", "a");
+    }
+
 }
