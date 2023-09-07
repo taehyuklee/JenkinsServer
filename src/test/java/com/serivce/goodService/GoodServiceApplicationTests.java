@@ -8,6 +8,7 @@ import static org.mockito.Mockito.when;
 
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
@@ -17,6 +18,14 @@ import com.serivce.goodService.first_service.utility.GoodUtility;
 
 // @SpringBootTest
 class GoodServiceApplicationTests {
+
+    static MockedStatic<GoodUtility> staticMocked;
+
+    @BeforeAll
+    public static void beforeAll(){
+        staticMocked = mockStatic(GoodUtility.class);
+    }
+
 
 	@Test
 	void contextLoads() {
@@ -58,8 +67,6 @@ class GoodServiceApplicationTests {
     public void staticMocktio(){
         /*static method is belong to class, not in instance. so Mockito library need to make something like proxy class with dynamic proxy technique
         that is mockStatic()*/
-
-        MockedStatic<GoodUtility> staticMocked = mockStatic(GoodUtility.class);
 
         String[] result = new String[] {"a", "b", "c"};
         when(GoodUtility.parsingMethod("a b c")).thenReturn(result);
