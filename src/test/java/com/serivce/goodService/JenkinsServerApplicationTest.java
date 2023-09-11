@@ -2,25 +2,20 @@ package com.serivce.goodService;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.mockStatic;
-import static org.mockito.Mockito.when;
 
 import java.util.List;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 // import org.springframework.boot.test.context.SpringBootTest;
 
-import com.serivce.goodService.first_service.service.GoodService;
 import com.serivce.goodService.first_service.utility.GoodUtility;
 
 // @SpringBootTest
-class GoodServiceApplicationTests {
+class JenkinsServerApplicationTest {
 
     // static MockedStatic<GoodUtility> staticMocked;
 
