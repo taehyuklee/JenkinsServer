@@ -37,6 +37,7 @@ public class GoodController {
     //Update
     @PutMapping("/serivce")
     public String update(){
+        System.out.println("hi put method");
         return "Success";
     }
 
