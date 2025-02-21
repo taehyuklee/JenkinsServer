@@ -31,6 +31,7 @@ public class GoodController {
     //Read
     @GetMapping("/service")
     public String find(){
+        System.out.println("Hi Get Method");
         return "Success";
     }
 
