@@ -23,6 +23,7 @@ public class GoodController {
     //Create
     @PostMapping("/service")
     public String create(){
+        System.out.println("post service");
         return "Success";
     }
 
